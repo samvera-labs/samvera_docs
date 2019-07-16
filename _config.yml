@@ -1,0 +1,14 @@
+exclude: [
+  "Gemfile",
+  "Gemfile.lock",
+  "Rakefile",
+  "lib",
+  "tasks",
+  "spec",
+  "node_modules",
+  "vendor/bundle/",
+  "vendor/cache/",
+  "vendor/gems/",
+  "vendor/ruby/",
+  "*.rb"
+]
