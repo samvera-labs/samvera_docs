@@ -85,6 +85,13 @@ class Publisher
       File.expand_path('../../_config.yml', __FILE__)
     end
 
+    def git_commit_msg
+      "Published: #{Time.now} " \
+      "Author: " + `git config user.name` \
+      "Summary: " + `git diff --shortstat HEAD~1..HEAD`
+    end
+
+    # Error handling methods.
     def raise_missing_config_option(key, example=nil)
       msg = "Missing required configuration option: '#{key}'." \
             "\n\n# add this to #{config_file_path}:" \
