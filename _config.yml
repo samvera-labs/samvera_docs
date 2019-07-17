@@ -13,9 +13,22 @@ exclude: [
   "*.rb"
 ]
 
+# Default frontmatter
 defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+
+# Setup Jekyll Collections to organize site content
+collections:
+  # The 'software' collection is general documentation about software produced
+  # by the Samvera community.
+  software:
+    output: true
+
+collections_dir: site_content
+
+publish:
+  gh_pages_repo: git@github.com:afred/afred.github.io.git
