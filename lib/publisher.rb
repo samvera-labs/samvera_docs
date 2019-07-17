@@ -1,5 +1,4 @@
 require 'tmpdir'
-require 'logger'
 require 'yaml'
 
 class Publisher
@@ -8,7 +7,7 @@ class Publisher
   def publish
     validate_in_sync_with_master!
     validate_required_config!
-    logger.info "Site is ready! Publishing to #{gh_pages_repo} (branch='#{gh_pages_branch}')..."
+    puts "Site is ready! Publishing to #{gh_pages_repo} (branch='#{gh_pages_branch}')..."
     Dir.mktmpdir do |tmp_dir|
       print_and_run "git clone #{gh_pages_repo} #{tmp_dir}"
       print_and_run "bundle exec jekyll build -d #{tmp_dir}"
@@ -26,7 +25,7 @@ class Publisher
   private
 
     def validate_in_sync_with_master!
-      ahead, behind = `git rev-list --left-right --count origin/master...HEAD`.split(/\s/).map(&:to_i)
+      behind, ahead = `git rev-list --left-right --count origin/master...HEAD`.split(/\s/).map(&:to_i)
       raise_not_in_sync_with_master(ahead, behind) unless ahead == 0 && behind == 0
     end
 
@@ -49,24 +48,8 @@ class Publisher
     def gh_pages_branch; config['gh_pages_branch']; end
 
     def print_and_run(command)
-      logger.info "Running: #{command}"
+      puts "Running: #{command}"
       `#{command}`
-    end
-
-    def logger
-      @logger ||= Logger.new(STDOUT)
-    end
-
-    def ready_to_publish?
-      up_to_date? && required_config_present?
-    end
-
-    def up_to_date?
-      false
-    end
-
-    def required_config_present?
-
     end
 
     def config
@@ -87,11 +70,19 @@ class Publisher
 
     def git_commit_msg
       "Published: #{Time.now} " \
-      "Author: " + `git config user.name` \
-      "Summary: " + `git diff --shortstat HEAD~1..HEAD`
+      "\nAuthor: #{git_user}" \
+      "\nSummary: #{git_diff_shortstat}"
     end
 
+    ###
+    # Git shortcuts.
+    ###
+    def git_user; `git config user.name`; end
+    def git_diff_shortstat; `git diff --shortstat HEAD~1..HEAD`; end
+
+    ###
     # Error handling methods.
+    ###
     def raise_missing_config_option(key, example=nil)
       msg = "Missing required configuration option: '#{key}'." \
             "\n\n# add this to #{config_file_path}:" \
@@ -102,7 +93,7 @@ class Publisher
 
     def raise_not_in_sync_with_master(ahead, behind)
       msg = "\nThis branch is not in sync with remote master." \
-            "\nYou are #{ahead} commits ahead and #{behind} commits " \
+            "\nYou are #{ahead} commit(s) ahead and #{behind} commit(s) " \
             "behind #{gh_pages_repo}/#{gh_pages_branch}" \
             "\nYou can only publish when your local branch is the same as " \
             "#{gh_pages_repo}/#{gh_pages_branch}\n\n"
