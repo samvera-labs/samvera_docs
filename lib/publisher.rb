@@ -26,12 +26,13 @@ class Publisher
   private
 
     def validate_in_sync_with_master!
-      raise NotInSyncWithMaster unless in_sync_with_master?
+      ahead, behind = `git rev-list --left-right --count origin/master...HEAD`.split(/\s/).map(&:to_i)
+      raise_not_in_sync_with_master(ahead, behind) unless ahead == 0 && behind == 0
     end
 
     def validate_required_config!
       required_config_keys.each do |key, desc|
-        raise MissingConfigOption.new(key, config_file_path, desc) unless config[key]
+        raise_missing_config_option(key, desc) unless config[key]
       end
     end
 
@@ -43,9 +44,9 @@ class Publisher
       }
     end
 
-    def gh_pages_repo
-      config['gh_pages_repo']
-    end
+    # shortcuts to config
+    def gh_pages_repo; config['gh_pages_repo']; end
+    def gh_pages_branch; config['gh_pages_branch']; end
 
     def print_and_run(command)
       logger.info "Running: #{command}"
@@ -84,13 +85,20 @@ class Publisher
       File.expand_path('../../_config.yml', __FILE__)
     end
 
-  class MissingConfigOption < StandardError
-    def initialize(key, config_file_path, example=nil)
+    def raise_missing_config_option(key, example=nil)
       msg = "Missing required configuration option: '#{key}'." \
             "\n\n# add this to #{config_file_path}:" \
             "\npublish:" \
             "\n  #{key}: # #{example || "your value here"}\n\n"
-      super msg
+      raise msg
     end
-  end
+
+    def raise_not_in_sync_with_master(ahead, behind)
+      msg = "\nThis branch is not in sync with remote master." \
+            "\nYou are #{ahead} commits ahead and #{behind} commits " \
+            "behind #{gh_pages_repo}/#{gh_pages_branch}" \
+            "\nYou can only publish when your local branch is the same as " \
+            "#{gh_pages_repo}/#{gh_pages_branch}\n\n"
+      raise msg
+    end
 end
