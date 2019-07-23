@@ -28,6 +28,10 @@ collections:
   software:
     output: true
 
+  posts:
+    output: true
+    permalink: /blog/:categories/:title
+
 collections_dir: site_content
 
 publish:
