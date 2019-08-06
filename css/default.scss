@@ -1,0 +1,16 @@
+---
+---
+@import 'colors.scss';
+@import 'main-content.scss';
+@import 'homepage.scss';
+@import 'footer.scss';
+
+body {
+  background: $palette-light-shade;
+
+  nav {
+    background: $palette-dark-shade;
+    color: $palette-light-shade;
+    padding: 10px;
+  }
+}

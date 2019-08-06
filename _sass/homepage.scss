@@ -1,0 +1,36 @@
+.homepage-row {
+  padding: 3em 0;
+  min-height: 80%;
+
+  .big-button {
+    text-align: center;
+    // background: $dark-red;
+    border: solid 3px $palette-main;
+    font-weight: bold;
+    color: $palette-main;
+    border-radius: 6px;
+    margin: auto;
+    padding: 15px;
+    min-width: 20em;
+    text-decoration: none;
+
+    i {
+      font-size: 10em;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      background: $palette-main;
+      color: $palette-light-shade;
+    }
+  }
+}
+
+
+
+
+
+
+.homepage-section {
+
+}

@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'github-pages', group: :jekyll_plugins
+
+group :jekyll_plugins do
+  gem 'jekyll-menus'
+end
+
 gem 'pry-byebug', group: :development

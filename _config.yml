@@ -20,6 +20,12 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+  -
+    scope:
+      path: ''
+      type: 'software'
+    values:
+      layout: 'software'
 
 # Setup Jekyll Collections to organize site content
 collections:
@@ -27,6 +33,7 @@ collections:
   # by the Samvera community.
   software:
     output: true
+    layout: "software"
 
   posts:
     output: true
@@ -36,3 +43,10 @@ collections_dir: site_content
 
 publish:
   gh_pages_repo: git@github.com:afred/afred.github.io.git
+
+
+plugins:
+  - jekyll-menus
+
+sass:
+  sass_dir: _sass
