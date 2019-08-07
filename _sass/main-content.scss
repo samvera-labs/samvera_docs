@@ -1,3 +1,19 @@
 .main-content {
   min-height: 500px;
+
+  .callout {
+    color: $color-light-shade;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 10px;
+
+
+    &.tip {
+      background-color: $color-assuring;
+    }
+
+    &.warning {
+      background-color: $color-warning;
+    }
+  }
 }

@@ -5,9 +5,9 @@
   .big-button {
     text-align: center;
     // background: $dark-red;
-    border: solid 3px $palette-main;
+    border: solid 3px $color-main;
     font-weight: bold;
-    color: $palette-main;
+    color: $color-main;
     border-radius: 6px;
     margin: auto;
     padding: 15px;
@@ -20,17 +20,8 @@
     }
 
     &:hover {
-      background: $palette-main;
-      color: $palette-light-shade;
+      background: $color-main;
+      color: $color-light-shade;
     }
   }
-}
-
-
-
-
-
-
-.homepage-section {
-
 }

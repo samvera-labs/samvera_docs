@@ -1,0 +1,10 @@
+@import 'colors.scss';
+
+nav {
+  background: $color-light-shade;
+  padding: 10px;
+
+  * {
+    color: $color-dark-shade;
+  }
+}
