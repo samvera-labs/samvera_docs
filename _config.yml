@@ -42,8 +42,8 @@ collections:
 collections_dir: site_content
 
 publish:
-  gh_pages_repo: git@github.com:afred/afred.github.io.git
-
+  git_remote: git@github.com:samvera-labs/samvera_docs.git
+  git_branch: gh-pages
 
 plugins:
   - jekyll-menus

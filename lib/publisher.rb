@@ -1,20 +1,29 @@
 require 'tmpdir'
 require 'yaml'
 
+# TODO: Consider turning this into a gem that implements a Jekyll::Command.
+# Currently, you can't
 class Publisher
-  attr_reader :tmp_dir
+  attr_reader :tmp_dir, :config
+
+  def initialize(opts={})
+    opts = opts.slice(:git_remote, :git_branch).compact
+    @config = default_config.merge(config_from_yaml).merge(opts)
+  end
 
   def publish
-    validate_in_sync_with_master!
+    validate_in_sync_with_origin_master!
+    validate_no_unstaged_changes!
     validate_required_config!
-    puts "Site is ready! Publishing to #{gh_pages_repo} (branch='#{gh_pages_branch}')..."
+    puts "Site is ready! Publishing to #{git_remote} (branch='#{git_branch}')..."
     Dir.mktmpdir do |tmp_dir|
-      print_and_run "git clone #{gh_pages_repo} #{tmp_dir}"
+      print_and_run "git clone #{git_remote} --branch #{git_branch} --single-branch #{tmp_dir}"
       print_and_run "bundle exec jekyll build -d #{tmp_dir}"
       Dir.chdir tmp_dir do
+        puts "(within #{tmp_dir})"
         print_and_run "git add ."
         print_and_run "git commit -m \"#{git_commit_msg}\""
-        print_and_run "git push"
+        print_and_run "git push #{git_remote} #{git_branch}"
       end
     end
   end
@@ -24,9 +33,14 @@ class Publisher
 
   private
 
-    def validate_in_sync_with_master!
+    def validate_in_sync_with_origin_master!
       behind, ahead = `git rev-list --left-right --count origin/master...HEAD`.split(/\s/).map(&:to_i)
-      raise_not_in_sync_with_master(ahead, behind) unless ahead == 0 && behind == 0
+      raise_not_in_sync_with_origin_master(ahead, behind) unless ahead == 0 && behind == 0
+    end
+
+    def validate_no_unstaged_changes!
+      count = `git diff --name-only`.split("\n").count
+      raise_unstaged_changes(count) if count > 0
     end
 
     def validate_required_config!
@@ -37,27 +51,22 @@ class Publisher
 
     def required_config_keys
       {
-        'gh_pages_repo' => "The Github Pages repository URL",
-        'gh_pages_branch' => "The branch Github Page has been configured to " \
-                             "read from (default: 'master')."
+        'git_remote' => "The Git repository url to push to.",
+        'git_branch' => "The Git branch to push to (default: 'master')."
       }
     end
 
     # shortcuts to config
-    def gh_pages_repo; config['gh_pages_repo']; end
-    def gh_pages_branch; config['gh_pages_branch']; end
+    def git_remote; config['git_remote']; end
+    def git_branch; config['git_branch']; end
 
     def print_and_run(command)
       puts "Running: #{command}"
       `#{command}`
     end
 
-    def config
-      @config ||= default_config.merge(config_from_yaml)
-    end
-
     def default_config
-      {'gh_pages_branch' => 'master'}
+      {'git_branch' => 'master'}
     end
 
     def config_from_yaml
@@ -91,12 +100,20 @@ class Publisher
       raise msg
     end
 
-    def raise_not_in_sync_with_master(ahead, behind)
-      msg = "\nThis branch is not in sync with remote master." \
-            "\nYou are #{ahead} commit(s) ahead and #{behind} commit(s) " \
-            "behind #{gh_pages_repo}/#{gh_pages_branch}" \
-            "\nYou can only publish when your local branch is the same as " \
-            "#{gh_pages_repo}/#{gh_pages_branch}\n\n"
+    def raise_not_in_sync_with_origin_master(ahead, behind)
+      msg = "This branch is not in sync with the upstream branch.\n" \
+            "You are #{ahead} commit(s) ahead and #{behind} commit(s) " \
+            "behind origin/master.\n" \
+            "You can only publish when your local branch is in sync with " \
+            "origin/master.\n\n"
+      raise msg
+    end
+
+    def raise_unstaged_changes(count)
+      msg = "You have #{count.to_i} unstaged changes that may affect how the " \
+            "site is built.\n" \
+            "You can only publish when your local branch is in sync with " \
+            "origin/master.\n\n"
       raise msg
     end
 end
