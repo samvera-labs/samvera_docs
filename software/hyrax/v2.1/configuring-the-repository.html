@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Configuring the Repository</title>
+    <!-- Bootstrap and dependencies from CDN. Order matters! -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Fontawesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="/css/default.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Samvera Docs</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Software
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Hyrax</a>
+          <a class="dropdown-item" href="#">Hyku</a>
+          <a class="dropdown-item" href="#">Valkyrie</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Hyrax</a>
+          <a class="dropdown-item" href="#">Sufia</a>
+          <a class="dropdown-item" href="#">Curation Concerns</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Community
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Developers</a>
+          <a class="dropdown-item" href="#">Dev-Ops</a>
+          <a class="dropdown-item" href="#">Repository Managers</a>
+          <a class="dropdown-item" href="#">Newbies</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    <div class="main-content">
+      <div class="versions">
+</div>
+
+<h1 id="configuring-the-repository">Configuring the Repository</h1>
+
+<p>From the Dashboard, Administrators have several Configuration options.</p>
+
+<h2 id="settings-appearance">Settings: Appearance</h2>
+
+<p><img src="images\screenshots\admin-configuration-appearance.png" alt="Appearance" /></p>
+
+<p>Administrators can change the general colors of the repository’s appearance. This includes the Header background color, Header text color, Link color, Footer link color, and Primary button background color. Click on the color bar for any of the elements you’d like to edit and use the color palette to make adjustments:</p>
+
+<p><img src="images\screenshots\admin-configuration-appearance-colors.png" alt="Color Palette" /></p>
+
+<p>Click Save to make the changes.</p>
+
+<h2 id="settings-collection-types">Settings: Collection Types</h2>
+
+<p><img src="images\screenshots\admin-configuration-collection-types.png" alt="Collection Types" /></p>
+
+<p>Repository Administrators can create and define collection types for the repository. Collection types include Administrative Sets and User Collections. Detailed information about collections and collection types are available in the <a href="http://samvera.github.io/collection-overview.html">Collections and Admin Sets</a> section of this website.</p>
+
+<h2 id="settings-pages">Settings: Pages</h2>
+
+<p><img src="images\screenshots\admin-configuration-pages.png" alt="Pages" /></p>
+
+<p>The Pages panel allows administrators to edit the About Page, Help Page, Deposit Agreement, and Terms of Use. These are static pages in the repository. This is not quite a <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG editor</a>. The text will conform to the CSS styles used by your repository. Tip: to add hyperlinks, create the links in a rich text editor, like Microsoft Word, and paste the link into the Pages text box. There is currently no way to create a link directly in the text editor.</p>
+
+<h2 id="settings-content-blocks">Settings: Content Blocks</h2>
+
+<p>Similar to Pages, Content blocks are editable text elements for the homepage. You can add an Announcement, Marketing Text, or a note about a Featured Researcher using these blocks. The same limitations to text editing as noted in the Pages section apply here.</p>
+
+<p><img src="images\screenshots\admin-configuration-contentblocks-announcements.png" alt="Announcement Content Block" /></p>
+
+<p>The Announcement Text is useful for notifying end-users about any scheduled downtime or repository maintenance. It corresponds to:</p>
+
+<p><img src="images\screenshots\admin-configuration-announcement-homepage.png" alt="Announcement on Homepage" /></p>
+
+<p><img src="images\screenshots\admin-configuration-contentblocks-marketing.png" alt="Marketing Text Content Block" /></p>
+
+<p>The Marketing Text is a good place to add a tagline for your repository. It corresponds to:</p>
+
+<p><img src="images\screenshots\admin-configuration-marketing-homepage.png" alt="Marketing Text on Homepage" /></p>
+
+<p><img src="images\screenshots\admin-configuration-contentblocks-featured.png" alt="Featured Researcher Content Block" /></p>
+
+<p>The Featured Researcher content block allows you to add a note about any researcher you choose to highlight on the homepage of your repository.</p>
+
+<p><img src="images\screenshots\admin-configuration-featured-homepage.png" alt="Featured Researcher Text on Homepage" /></p>
+
+<h2 id="settings-features">Settings: Features</h2>
+
+<p>There are several features that are automatically enabled in Hyrax, but these can be toggled on and off from the Features panel:</p>
+
+<p><img src="images\screenshots\admin-configuration-features-2.1.png" alt="Configuration Features" /></p>
+
+<p>The highlighted option in the Actions column signifies the current selection. Click on the Off option for any feature you wish to disable for your repository. Here is a <a href="https://github.com/samvera/hyrax/wiki/Feature-matrix">complete list</a> of features in Hyrax.</p>
+
+<h2 id="workflow-roles">Workflow Roles</h2>
+
+<p>The Workflow Roles panel will allow repository administrators to search for any registered user in the repository and assign them a role in an Administrative Set workflow. From the page, you can Assign Roles or view Current Roles. This is a high-level view of users and their roles in various workflows in the administrative sets within your repository. It is recommended that repository managers assign and manage roles from the specific administrative set edit page.</p>
+
+<h3 id="assign-roles">Assign Roles</h3>
+
+<p>The Assign Role box presents a drop-down menu for every user in the repository. First, select the user, then, select the Administrative Set from the Workflow Role drop-down menu. The Workflow Role menu will give you these role options for every Administrative Set: Approving, Depositing, or Managing.</p>
+
+<p><img src="images\screenshots\assign-roles-2.png" alt="Assign Role" /></p>
+
+<h3 id="current-roles">Current Roles</h3>
+
+<p>The Current Roles table displays all users of the repository and their roles. When a user has a Workflow Role that needs to be removed, you can click on the red X next to the role. You will be asked to confirm your choice to edit a user’s Workflow Role before the action can be completed.</p>
+
+<p><img src="images\screenshots\current-roles-2.png" alt="Current Roles" /></p>
+
+
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-lg-12 footer">
+      &copy;2019 Samvera. All rights reserved. <br />
+       Site last generated: Aug 8, 2019 <br />
+      <a href=""></a><br />
+      <a href=""></a><br />
+      <p><img src="/images/samvera_logo.png" alt="Samvera Logo"/></p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Creating a Work</title>
+    <!-- Bootstrap and dependencies from CDN. Order matters! -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Fontawesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="/css/default.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Samvera Docs</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Software
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Hyrax</a>
+          <a class="dropdown-item" href="#">Hyku</a>
+          <a class="dropdown-item" href="#">Valkyrie</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Hyrax</a>
+          <a class="dropdown-item" href="#">Sufia</a>
+          <a class="dropdown-item" href="#">Curation Concerns</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Community
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Developers</a>
+          <a class="dropdown-item" href="#">Dev-Ops</a>
+          <a class="dropdown-item" href="#">Repository Managers</a>
+          <a class="dropdown-item" href="#">Newbies</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    <div class="main-content">
+      <div class="versions">
+</div>
+
+<h1 id="creating-a-work">Creating a Work</h1>
+
+<p>Works are items in the repository, containing files and metadata. Works are presented as one intellectual object. Example: A single dissertation (PDF and metadata), a dataset containing multiple files (spreadsheets, images, text files and metadata).</p>
+
+<p>A user must be logged in to create a Work. There are several ways to add a new work:</p>
+
+<ul>
+  <li>On the homepage, click “Share Your Work”</li>
+  <li>In the top navigation menu, click “Works”, “New Work”.</li>
+  <li>In the Dashboard, click “Create Work”</li>
+</ul>
+
+<p>There four tabs in the Add New Work interface: “Description”, “Files”, “Relationships”, and “Share”. In order to be deposited, a work must minimally have: the required description fields filled out, at least one file uploaded, and the deposit agreement checkbox checked. Once these required items are completed, the depositor must click “Save” in order to deposit the work. Navigating away from the deposit screen before clicking save causes user to have to redo deposit.</p>
+
+<h2 id="description-required">Description (required)</h2>
+<p>The “Description” tab is for adding descriptive metadata. Fill out the fields marked “Required”. Clicking “Additional Fields” will show more metadata fields, which are optional. Customizing fields is possible see bottom section Metadata</p>
+
+<h2 id="files-required">Files (required)</h2>
+<p>The “Files” tab is for uploading files, either locally or from a cloud service. You can browse local files to upload, or drag and drop files from your desktop. If your repository is configured to interact with a cloud service such as Dropbox, users can click “Browse cloud files” and securely connect to their own Dropbox. They can then browse cloud files to upload. Files can also be removed from the deposit in the “Files” tab.</p>
+
+<h2 id="relationships-optional">Relationships (optional)</h2>
+<p>The “Relationships” tab lets you add the work to an Administrative Set or a Collection. Administrative users can add a work to any Administrative Set or Collection in the repository; other users are only able to add works to Collections that they have created or that they have permission to deposit to. (See settings, admin sets below)</p>
+
+<h2 id="sharing-works-optional">Sharing works (optional)</h2>
+<p>The “Share” tab allows you to share the work with other users. Under “Share work with other users”, you can search for users using their email address. In the “Choose Access” drop down menu, select either “View/Download” or “Edit”. “Edit” access gives the selected users all the capabilities of the depositor, including deleting and sharing with other users. Under “Share work with groups of users”, you can select a group of users to assign “View/Download” or “Edit” access to. You can also edit or remove sharing settings in this tab. All works deposited are automatically shared with admin users.</p>
+
+<h2 id="visibility">Visibility</h2>
+<p>On the sidebar, you can select one of five options for visibility: Public, Your Institution, Embargo, Lease, Private. This setting only controls who can view or download your work – it does not control edit access (this must be done in the “Share” tab).</p>
+
+<ul>
+  <li>Institution restricts access to works and work metadata to users with login privileges</li>
+  <li>Embargo lets you restrict access to Private or Institution until a specified date, when it will be opened to Open Access or Institution</li>
+  <li>Lease permits access to the work to the public or Institution until a specified date, when it will be restricted to Private or Institution</li>
+</ul>
+
+<h2 id="deposit-agreement-required">Deposit Agreement (required)</h2>
+<p>The depositor must check the deposit agreement checkbox in order to deposit. The agreement can be customized [HERE]</p>
+
+<h2 id="depositing-as-a-proxy">Depositing as a proxy</h2>
+<p>Users can designate other users of the system to deposit on their behalf by visiting their dashboard. Once someone has been set as a proxy for another user, the sidebar will offer the option to deposit on behalf of yourself or the other user. If you deposit on behalf of another user, the ownership of the work will automatically be transferred to that user when the deposit completes.</p>
+
+
+    </div>
+    <footer>
+  <div class="row">
+    <div class="col-lg-12 footer">
+      &copy;2019 Samvera. All rights reserved. <br />
+       Site last generated: Aug 8, 2019 <br />
+      <a href=""></a><br />
+      <a href=""></a><br />
+      <p><img src="/images/samvera_logo.png" alt="Samvera Logo"/></p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
