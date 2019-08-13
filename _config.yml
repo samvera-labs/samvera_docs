@@ -47,6 +47,7 @@ publish:
 
 plugins:
   - jekyll-menus
+  # - jekyll-ship
 
 sass:
   sass_dir: _sass

@@ -1,8 +1,38 @@
+GIT
+  remote: https://github.com/afred/jekyll-ship.git
+  revision: 7eeb440beb593f956efa12a289fa59bcde6b6c87
+  specs:
+    jekyll-ship (0.2.0)
+      activesupport (~> 5)
+      aws-sdk-s3 (~> 1)
+      jekyll (~> 3.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.2.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    aws-eventstream (1.0.3)
+    aws-partitions (1.200.0)
+    aws-sdk-core (3.62.0)
+      aws-eventstream (~> 1.0, >= 1.0.2)
+      aws-partitions (~> 1.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1.0)
+    aws-sdk-kms (1.24.0)
+      aws-sdk-core (~> 3, >= 3.61.1)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.46.0)
+      aws-sdk-core (~> 3, >= 3.61.1)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.1.0)
+      aws-eventstream (~> 1.0, >= 1.0.2)
     byebug (11.0.1)
     coderay (1.1.2)
     colorator (1.1.0)
@@ -35,6 +65,7 @@ GEM
       sass (~> 3.4)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jmespath (1.4.0)
     kramdown (1.17.0)
     liquid (4.0.0)
     listen (3.1.5)
@@ -43,6 +74,7 @@ GEM
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
     method_source (0.9.2)
+    minitest (5.11.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     pry (0.12.2)
@@ -64,12 +96,16 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    thread_safe (0.3.6)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   jekyll-menus
+  jekyll-ship!
   pry-byebug
   rake
 
