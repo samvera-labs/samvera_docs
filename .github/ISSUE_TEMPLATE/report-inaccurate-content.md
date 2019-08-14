@@ -1,6 +1,6 @@
 ---
-name: Inaccurate Content
-about: Used for reporting inaccurate documentation
+name: Report Inaccurate Content
+about: Report a high priority change to fix inaccurate content
 title: This page lies
 labels: 'inaccurate'
 assignees: ''

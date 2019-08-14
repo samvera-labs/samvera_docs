@@ -1,6 +1,6 @@
 ---
-name: Update Content
-about: Used for requesting new documentation
+name: Suggest Change to Content
+about: Suggest a change to improve content comprehensibility.
 title:
 labels: 'content'
 assignees: ''

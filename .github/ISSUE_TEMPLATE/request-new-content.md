@@ -1,6 +1,6 @@
 ---
-name: Suggest New Content
-about: Used for requesting new documentation
+name: Request New Content
+about: Request one or more new pages
 title:
 labels: 'content'
 assignees: ''
