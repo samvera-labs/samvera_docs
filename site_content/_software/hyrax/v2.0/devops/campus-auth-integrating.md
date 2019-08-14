@@ -1,10 +1,7 @@
 ---
 title: "Integrating with Campus Authorization"
-permalink: campus-auth-integrating.html
 keywords: ["Integration", "Shibboleth", "Authorization"]
-tags: production
 summary: "An example of integrating with Shibboleth"
-toc: false
 ---
 
 

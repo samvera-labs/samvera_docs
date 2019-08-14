@@ -1,9 +1,6 @@
 ---
 title: "Presenters Design Pattern"
-permalink: patterns-presenters.html
 keywords: ["Design Patterns", "Presenters"]
-last_updated:
-sidebar: home_sidebar
 ---
 
 # Understanding the Presenters Design Pattern

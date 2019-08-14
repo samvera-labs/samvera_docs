@@ -1,11 +1,7 @@
 ---
 title: "Troubleshooting Production"
-permalink: troubleshooting-production.html
 keywords: ["Debugging", "Troubleshooting", "Production"]
-last_updated:
-tags: production
 summary: "Known issues regarding running in production"
-sidebar: home_sidebar
 ---
 
 # Known gotchas

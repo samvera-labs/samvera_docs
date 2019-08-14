@@ -1,8 +1,6 @@
 ---
 title: "How Do I Build Searches?"
-permalink: building-searches.html
 keywords: ["Solr", "Blacklight", "Search Builders"]
-sidebar: home_sidebar
 ---
 
 ### Overview

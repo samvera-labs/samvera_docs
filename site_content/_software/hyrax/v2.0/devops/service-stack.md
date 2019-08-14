@@ -1,8 +1,6 @@
 ---
 title: "The Services Stack"
-permalink: service-stack.html
 keywords: ["Solr", "Fedora", "Redis", "Services"]
-tags: production
 summary: "Services used in a production setting"
 ---
 
