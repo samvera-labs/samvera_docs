@@ -1,9 +1,6 @@
 ---
 title: "Overview of Design Pattern"
-permalink: patterns-overview.html
 keywords: ["Design Patterns"]
-last_updated:
-sidebar: home_sidebar
 ---
 
 <ul class="info"><li><b>Best practice for classes is for each class to have a single responsibility.</b></li></ul>

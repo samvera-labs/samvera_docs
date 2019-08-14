@@ -1,10 +1,6 @@
 ---
 title: "Working with the Actor Stack"
-permalink: actor_stack.html
 keywords: ["Actor Stack", "Middleware", "Design Patterns"]
-last_updated:
-sidebar: home_sidebar
-toc: false
 ---
 
 #### *Content provided by an interview with Mike Giarlo*
