@@ -20,6 +20,10 @@ reproduce it, we won't know when it's fixed._
 
 _A clear and concise description of what you expected to happen._
 
+**Front end or back end?**
+
+_Add labels for 'font end' and/or 'back end' as appropriate._
+
 **Done when:**
 
 _List all the criteria that needs to be met for this ticket to be closed._
