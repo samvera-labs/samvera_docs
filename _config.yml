@@ -34,10 +34,14 @@ collections:
   software:
     output: true
     layout: "software"
+    permalink: :path
 
   posts:
     output: true
     permalink: /blog/:categories/:title
+
+  pages:
+    output: true
 
 collections_dir: site_content
 
