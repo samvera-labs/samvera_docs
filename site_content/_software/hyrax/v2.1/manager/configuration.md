@@ -1,6 +1,12 @@
 ---
 title: "Configuring the Repository"
-categories: Configuration
+keywords:
+  - "Best Practices"
+  - "Managers"
+  - "Repository Managers"
+  - "Hyrax Administration"
+  - "Configuration"
+  - "Settings"
 ---
 # Configuring the Repository
 
