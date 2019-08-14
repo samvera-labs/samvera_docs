@@ -1,28 +1,29 @@
 ---
-name: Request New Content
-about: Request one or more new pages
-title:
+name: New Documentation
+about: Request new documentation
+title: ""
 labels: 'content'
 assignees: ''
 
 ---
 
-**Description**
+### Description
 
-_Describe what new content is needed and why (one page per ticket please)._
+_Describe what new content is needed and why. (Please limit one concept per
+ticket)._
 
-**Primary audience**
+### Primary audience
 
 - [ ] Developers
 - [ ] Managers
 - [ ] DevOps
 - [ ] Everybody
 
-**Software versions**
+### Software versions
 
 _List all versions of the software for which this content is applicable. If it
 is not tied to any specific software version, just say "All"_
 
-**Done when:**
+### Done when
 
 _List all the criteria that needs to be met for this ticket to be closed._
