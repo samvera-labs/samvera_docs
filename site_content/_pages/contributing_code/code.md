@@ -25,12 +25,6 @@ Many developers in the Samvera community practice [test-driven development](http
 
 We tend to use RSpec as our testing tool of choice, with Capybara for feature tests, and our tests tend to conform to [community-driven testing guidelines](http://betterspecs.org/). All of our codebases on GitHub integrate with the Travis continuous integration service, which allows reviewers to see if changes made in pull requests have a passing test suite. We also tend to use Coveralls to determine whether the proposed changes have increased or decreased overall code coverage.
 
-## Style guidelines
-
-The Samvera community uses a somewhat modified version of the default Ruby style conventions provided by the Rubocop tool. If your pull request contains style violations, continuous integration builds will fail quickly and your work will be in an unmergeable state.
-
-Fortunately, it's very easy (and fast) to check this in your development environment. Run the `rubocop` command to see if your changes pass muster. If they do not, Rubocop also supports an auto-fix flag for some violations. To do this, run `rubocop -a` -- but we recommend committing your changes first, because though this seldom happens, Rubocop can sometimes "fix" your code into a state that causes tests to fail. (Don't worry about having to commit earlier, or more, than you intended; you can always squash your commits later.)
-
 ## Pull request size and shape
 
 We have found over the years that it is best when pull requests are small; targeted at a specific issue; and pushed up quickly for review.
