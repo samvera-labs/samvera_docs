@@ -1,10 +1,7 @@
 ---
 name: New Documentation
 about: Request new documentation
-title: ""
-labels: 'content'
-assignees: ''
-
+labels: ['content']
 ---
 
 ### Description

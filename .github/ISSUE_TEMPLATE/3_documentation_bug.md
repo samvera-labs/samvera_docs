@@ -4,9 +4,7 @@ about: >
   Report any documentation that is wrong, contradictory, gibberish, etc. These
   tickets are high priority and need to be fixed right away.
 title: This page lies
-labels: 'bug', 'content', 'high priority'
-assignees: ''
-
+labels: ['bug', 'content', 'high priority']
 ---
 
 ### Description

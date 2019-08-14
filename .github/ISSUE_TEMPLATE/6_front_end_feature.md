@@ -1,12 +1,9 @@
 ---
-name: Back End Feature
+name: Front End Feature
 about: >
   Add or improve a front end feature to improve user experience wit the
   generated site.
-title: ''
-labels: 'feature', 'front end'
-assignees: ''
-
+labels: ['feature', 'front end']
 ---
 
 ### Description

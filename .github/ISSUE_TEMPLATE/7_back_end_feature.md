@@ -1,10 +1,7 @@
 ---
 name: Back End Feature
 about: Add or improve a back end feature used to generate the web site.
-title: ''
-labels: 'feature', 'back end'
-assignees: ''
-
+labels: ['feature', 'back end']
 ---
 
 ### Description

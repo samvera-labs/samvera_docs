@@ -1,10 +1,7 @@
 ---
 name: Front End Bug
-about: Report an bug with the generated site
-title: ''
-labels: 'bug', 'front end'
-assignees: ''
-
+about: Report a bug with the generated site
+labels: ['bug', 'front end']
 ---
 
 ### What's wrong?

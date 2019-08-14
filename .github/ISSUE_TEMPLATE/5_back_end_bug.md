@@ -1,10 +1,7 @@
 ---
 name: Back End Bug
 about: Report a bug with the back end code used to build the site.
-title: ''
-labels: 'bug', 'back end'
-assignees: ''
-
+labels: ['bug', 'back end']
 ---
 
 ### What's wrong?

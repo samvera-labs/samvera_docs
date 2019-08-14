@@ -1,10 +1,7 @@
 ---
 name: Improve Existing Documentation
 about: Suggest a change to improve existing documentation.
-title:
-labels: 'content'
-assignees: ''
-
+labels: ['content']
 ---
 
 ### Description
