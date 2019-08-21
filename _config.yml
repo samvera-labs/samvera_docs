@@ -1,18 +1,3 @@
-exclude: [
-  "Gemfile",
-  "Gemfile.lock",
-  "Rakefile",
-  "lib",
-  "tasks",
-  "spec",
-  "node_modules",
-  "vendor/bundle/",
-  "vendor/cache/",
-  "vendor/gems/",
-  "vendor/ruby/",
-  "*.rb"
-]
-
 # Default frontmatter
 defaults:
   -
@@ -44,14 +29,6 @@ collections:
     output: true
 
 collections_dir: site_content
-
-publish:
-  git_remote: git@github.com:samvera-labs/samvera_docs.git
-  git_branch: gh-pages
-
-plugins:
-  - jekyll-menus
-  # - jekyll-ship
 
 sass:
   sass_dir: _sass
